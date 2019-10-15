@@ -2,7 +2,9 @@
   <div class="index">
     <van-swipe :autoplay="3000">
       <van-swipe-item v-for="item in images" :key="item">
-        <img :src="item" />
+        <router-link to="/productIndex">
+          <img :src="item" />
+        </router-link>
       </van-swipe-item>
     </van-swipe>
     <!-- <van-grid :border="false" :column-num="3">
