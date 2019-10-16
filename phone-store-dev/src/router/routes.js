@@ -5,6 +5,8 @@ const HomeIndex = () => import("@/views/index/index")
 const ProductIndex = () => import("@/views/productIndex/index")
 const ProfileIndex = () => import("@/views/profile/index")
 const BusIndex = () => import("@/views/shopBus/index")
+const MsgIndex = () => import("@/views/message/index")
+
 
 export default [
     {
@@ -41,6 +43,15 @@ export default [
         name: 'cart',
         components: {
             default: BusIndex,
+            header: Header,
+            footer: Footer
+        }
+    },
+    {
+        path: '/message',
+        name: 'message',
+        components: {
+            default: MsgIndex,
             header: Header,
             footer: Footer
         }
