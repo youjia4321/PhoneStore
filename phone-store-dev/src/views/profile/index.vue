@@ -6,10 +6,10 @@
         <van-icon name="pending-payment" />待付款
       </van-col>
       <van-col span="6">
-        <van-icon name="records" />待接单
+        <van-icon name="records" info="99+" />待接单
       </van-col>
       <van-col span="6">
-        <van-icon name="tosend" />待发货
+        <van-icon name="tosend" info="99+" />待发货
       </van-col>
       <van-col span="6">
         <van-icon name="logistics" />已发货
@@ -23,8 +23,9 @@
     <van-cell-group class="user-group">
       <van-cell icon="points" title="我的积分" is-link />
       <van-cell icon="star-o" title="我的收藏" is-link />
-      <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
       <van-cell icon="gift-o" title="我收到的礼物" is-link />
+      <van-cell icon="free-postage" title="我的收货地址" is-link to="/addressList" />
+      <Coupons></Coupons>
     </van-cell-group>
 
     <van-cell-group>
@@ -37,6 +38,7 @@
 
 <script>
 import { Row, Col, Icon, Cell, CellGroup } from "vant";
+import Coupons from "@/views/profile/coupons";
 import ProfilePng from "@/assets/img/profile.png";
 export default {
   components: {
@@ -44,7 +46,8 @@ export default {
     [Col.name]: Col,
     [Icon.name]: Icon,
     [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup
+    [CellGroup.name]: CellGroup,
+    Coupons
   },
   data() {
     return {

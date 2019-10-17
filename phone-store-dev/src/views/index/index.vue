@@ -13,14 +13,14 @@
       </van-grid-item>
     </van-grid>-->
     <van-grid :column-num="4">
-      <van-grid-item icon="hot" text="今日爆款" />
-      <van-grid-item icon="good-job" text="最新上线" />
-      <van-grid-item icon="music" text="电子设备" />
-      <van-grid-item icon="wap-home" text="生活家居" />
-      <van-grid-item icon="vip-card" text="优惠划算" />
-      <van-grid-item icon="wechat" text="通信产品" />
-      <van-grid-item icon="new-arrival" text="近期新品" />
-      <van-grid-item icon="alipay" text="支付选项" />
+      <van-grid-item icon="hot" text="今日爆款" @click="toast"/>
+      <van-grid-item icon="good-job" text="最新上线" @click="toast" />
+      <van-grid-item icon="music" text="电子设备" @click="toast"/>
+      <van-grid-item icon="wap-home" text="生活家居" @click="toast"/>
+      <van-grid-item icon="vip-card" text="优惠划算" @click="toast"/>
+      <van-grid-item icon="wechat" text="通信产品" @click="toast"/>
+      <van-grid-item icon="new-arrival" text="近期新品" @click="toast"/>
+      <van-grid-item icon="alipay" text="支付选项" @click="toast"/>
     </van-grid>
     <van-divider :style="{ fontSize:'12px', padding: '0 16px' }">已经到底了</van-divider>
     <router-view name="footer"></router-view>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { Grid, GridItem, Image, Swipe, SwipeItem, Divider } from "vant";
+import { Grid, GridItem, Image, Swipe, SwipeItem, Divider, Toast } from "vant";
 import apple2 from "@/assets/img/apple-2.jpg";
 import apple3 from "@/assets/img/apple-3.jpg";
 import bus1 from "@/assets/img/bus3-1.jpeg";
@@ -46,6 +46,11 @@ export default {
     return {
       images: [apple2, bus2, apple3, bus1]
     };
+  },
+  methods: {
+    toast() {
+      Toast("暂无后续逻辑~");
+    }
   }
 };
 </script>

@@ -81,7 +81,7 @@ export default {
         price: 568000,
         express: "免运费",
         remain: 19,
-        thumb: [apple2, apple3, bus1, bus2]
+        thumb: [apple3, apple2, bus1, bus2]
       }
     };
   },

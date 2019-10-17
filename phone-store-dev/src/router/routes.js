@@ -6,7 +6,8 @@ const ProductIndex = () => import("@/views/productIndex/index")
 const ProfileIndex = () => import("@/views/profile/index")
 const BusIndex = () => import("@/views/shopBus/index")
 const MsgIndex = () => import("@/views/message/index")
-
+const AddressList = () => import("@/views/profile/addressList")
+const AddressAdd = () => import("@/views/profile/addressAdd")
 
 export default [
     {
@@ -54,6 +55,18 @@ export default [
             default: MsgIndex,
             header: Header,
             footer: Footer
+        }
+    }, {
+        path: '/addressList',
+        name: 'addressList',
+        components: {
+            default: AddressList,
+        }
+    }, {
+        path: '/addressAdd',
+        name: 'addressAdd',
+        components: {
+            default: AddressAdd,
         }
     }
 ]
